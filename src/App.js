@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import img from "./logo.svg";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            {/* 方法1 */}
+            {/* 圖片放 /public */}
+            <img src={process.env.PUBLIC_URL + "/IMG_2147.JPG"} />
+            {/* 方法2 */}
+            {/* 圖片放 /src */}
+            <img src={img} />
+        </div>
+    );
 }
 
 export default App;
